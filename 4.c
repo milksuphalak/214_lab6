@@ -14,4 +14,26 @@ int main()
         p[s[0][i]]++;
         p[s[1][i]]++;
     }
+    max = p[0];
+    for(i=0;i<n;i++)
+    {
+        if(p[i]>max)
+        {
+            x = i;
+            max = p[i];
+        }
+    }
+     if(p[s[0][x]-1]<p[s[0][x]-1])
+        y = s[0][x]-1;
+    else if(p[s[0][x]-1]>p[s[0][x]-1])
+        y = s[1][x]-1;
+    else
+         {
+        if(s[0][x]<s[1][x])
+            y = s[0][x]-1;
+        else
+            y = s[1][x]-1;
+    }
+    printf("%d %d",x+1,y+1);
+return 0;
 }
