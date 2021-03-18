@@ -8,14 +8,15 @@ int main ()
     for (i=0;i<n;i++)
     {
         scanf ("%s",sort[i]);
-
-
     }
     {
     for (j=i+1;j<n;j++)
         {
             if (strcmp(sort[i],sort[j]) > 0)
             {
+               strcpy(s,sort[i]);
+                strcpy(sort[i],sort[j]);
+                strcpy(sort[j],s);
 
             }
         }
